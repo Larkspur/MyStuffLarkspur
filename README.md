@@ -1,5 +1,4 @@
 # MyStuffLarkspur
-<!DOCTYPE HTML>
 <html>
 <head>
 
