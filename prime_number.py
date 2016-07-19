@@ -1,6 +1,6 @@
 def check_if_prime(number):
     factors = [number]
-    for value in range(1, number):
+    for value in range(1, (number + 1) / 2 + 1):
         if number % value == 0:
             factors.append(value)
     if factors == [number, 1]:
@@ -10,7 +10,7 @@ def check_if_prime(number):
 
 def list_factors(number):
     factors = []
-    for value in range(1, number):
+    for value in range(1, (number + 1) / 2 + 1):
         if number % value == 0:
             factors.append(value)
     factors.append(number)
@@ -20,14 +20,13 @@ def list_factors(number):
     return "Factors: " + ", ".join(final)
 
 def prime_factorization(number):
-    smaller_primes = []
-    for value in range(2, number + 1):
-        if check_if_prime(value) == True:
-            smaller_primes.append(value)
-    prime_factors = []
-    for value in smaller_primes:
-        while number % value == 0:
-            prime_factors.append(value)
-            number = number / value
-    return prime_factors
-
+	if check_if_prime(number) == True:
+		return number
+	else:
+    	prime_factors = []
+    	for value in range(2, (number + 1) / 2 + 1)
+        	if check_if_prime(value) == True:
+            	while number % value == 0:
+            		prime_factors.append(value)
+            		number = number / value
+    	return prime_factors
