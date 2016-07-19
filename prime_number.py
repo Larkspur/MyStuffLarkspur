@@ -31,4 +31,3 @@ def prime_factorization(number):
             number = number / value
     return prime_factors
 
-print prime_factorization(45)
