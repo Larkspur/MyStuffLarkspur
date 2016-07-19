@@ -7,13 +7,18 @@ def check_if_prime(number):
         return True
     else:
         return False
+
 def list_factors(number):
     factors = []
     for value in range(1, number):
         if number % value == 0:
             factors.append(value)
     factors.append(number)
-    return factors
+    final = []
+    for factor in factors:
+        final.append(str(factor))
+    return "Factors: " + ", ".join(final)
+
 def prime_factorization(number):
     smaller_primes = []
     for value in range(2, number + 1):
@@ -25,3 +30,5 @@ def prime_factorization(number):
             prime_factors.append(value)
             number = number / value
     return prime_factors
+
+print prime_factorization(45)
